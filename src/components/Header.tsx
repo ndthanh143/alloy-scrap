@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, PhoneIcon } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);

@@ -9,6 +9,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 // import { toast } from "sonner"
 
+export type QuoteFormData = {
+  name: string;
+  phone: string;
+  company?: string | null;
+  email?: string | null;
+  message?: string | null;
+  product: string;
+};
+
 const schema = yup.object().shape({
   name: yup.string().required("Vui lòng nhập họ tên"),
   phone: yup.string().required("Vui lòng nhập số điện thoại"),
@@ -27,7 +36,7 @@ export function QuoteForm() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: QuoteFormData) => {
     // toast.success("Yêu cầu báo giá đã được gửi!")
     console.log("Form submitted:", data);
   };
