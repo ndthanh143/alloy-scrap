@@ -6,24 +6,19 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Hợp kim là gì?",
+    question: "Phế liệu hợp kim là gì?",
     answer:
-      "Hợp kim là vật liệu được tạo thành từ hai hoặc nhiều kim loại khác nhau hoặc giữa kim loại và phi kim.",
+      "Phế liệu hợp kim là những vật liệu kim loại đã qua sử dụng, bị hỏng hoặc không còn giá trị sử dụng. Chúng có thể được thu mua để tái chế và tái sử dụng, đặc biệt là các loại hợp kim như thép, nhôm, đồng, và các hợp kim khác dùng trong ngành công nghiệp cơ khí.",
   },
   {
-    question: "Công ty thu mua hợp kim tại đâu?",
+    question: "Dao hợp kim bị gãy bể có thu mua không?",
     answer:
-      "Chúng tôi thu mua hợp kim trên toàn quốc, phục vụ tận nơi từ thành phố đến vùng sâu vùng xa.",
+      "Chúng tôi thu mua tất cả các loại dao hợp kim, bao gồm cả những dao bị gãy, bể hoặc hư hỏng. Các dao hợp kim này sẽ được tái chế và sử dụng lại cho các quy trình gia công khác.",
   },
   {
-    question: "Làm sao để nhận báo giá?",
+    question: "Số lượng tối thiểu để thu mua là bao nhiêu ký?",
     answer:
-      "Chỉ cần điền form hoặc gọi điện, chúng tôi sẽ báo giá nhanh chóng trong 5 phút.",
-  },
-  {
-    question: "Có hỗ trợ kiểm tra hàng tại chỗ không?",
-    answer:
-      "Có, đội ngũ kỹ thuật của chúng tôi có thể đến tận nơi để đánh giá và kiểm tra loại hợp kim bạn bán.",
+      "Không có yêu cầu về số lượng tối thiểu khi thu mua phế liệu hợp kim. Chúng tôi thu mua mọi số lượng, dù là số lượng nhỏ hay lớn, và cam kết mang lại giá trị hợp lý cho khách hàng.",
   },
 ];
 
@@ -70,7 +65,7 @@ export function FAQSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="px-5 pb-5 text-gray-600">
+                      <div className="text-left px-5 pb-5 text-gray-600">
                         <p>{faq.answer}</p>
                       </div>
                     </motion.div>

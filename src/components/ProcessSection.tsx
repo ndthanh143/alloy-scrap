@@ -1,27 +1,49 @@
 // app/components/ProcessSection.tsx
-import { Truck, Phone, PackageCheck, Store } from "lucide-react";
+import {
+  PhoneCall,
+  Camera,
+  FileText,
+  Handshake,
+  Scale,
+  CreditCard,
+} from "lucide-react";
 
 const steps = [
   {
-    title: "Liên hệ & tư vấn",
-    description: "Gọi điện hoặc điền form để chúng tôi hỗ trợ nhanh nhất.",
-    icon: Phone,
-  },
-  {
-    title: "Báo giá nhanh",
+    title: "Tiếp nhận thông tin",
     description:
-      "Chúng tôi gửi báo giá trong vòng 5 phút sau khi nhận thông tin.",
-    icon: PackageCheck,
+      "Khách hàng liên hệ để cung cấp thông tin sơ bộ về loại phế liệu, số lượng và địa điểm.",
+    icon: PhoneCall, // Icon đại diện cho cuộc gọi
   },
   {
-    title: "Thu mua tận nơi",
-    description: "Chúng tôi đến tận nơi kiểm tra, thu mua và thanh toán ngay.",
-    icon: Truck,
+    title: "Khảo sát qua hình ảnh hoặc đến xem thực tế",
+    description:
+      "Tiến hành khảo sát thông qua hình ảnh do khách cung cấp hoặc đến tận nơi để đánh giá trực tiếp.",
+    icon: Camera, // Icon máy ảnh để thể hiện khảo sát
   },
   {
-    title: "Giao hàng toàn quốc",
-    description: "Chúng tôi cung cấp hợp kim cho khách hàng trên toàn quốc.",
-    icon: Store,
+    title: "Báo giá",
+    description:
+      "Sau khi khảo sát, chúng tôi đưa ra mức giá thu mua phù hợp với thị trường và tình trạng hàng hóa.",
+    icon: FileText, // Icon tài liệu, biểu tượng của báo giá
+  },
+  {
+    title: "Chốt giá",
+    description:
+      "Thỏa thuận và xác nhận giá cuối cùng giữa hai bên trước khi tiến hành thu mua.",
+    icon: Handshake, // Icon bắt tay để thể hiện sự đồng thuận
+  },
+  {
+    title: "Cân hàng",
+    description:
+      "Tiến hành cân đo hàng hóa bằng thiết bị chính xác để xác định khối lượng thực tế.",
+    icon: Scale, // Icon cái cân để thể hiện việc cân hàng
+  },
+  {
+    title: "Thanh toán",
+    description:
+      "Hoàn tất giao dịch bằng cách thanh toán đầy đủ và nhanh chóng cho khách hàng.",
+    icon: CreditCard, // Icon thẻ tín dụng thể hiện thanh toán
   },
 ];
 
@@ -35,7 +57,7 @@ export function ProcessSection() {
         <p className="text-muted-foreground mb-12">
           Chúng tôi phục vụ trên toàn quốc – nhanh chóng, minh bạch và tiện lợi.
         </p>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div
               key={index}

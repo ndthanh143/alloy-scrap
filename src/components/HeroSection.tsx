@@ -25,8 +25,8 @@ export function HeroSection() {
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
             Chuyên thu mua hợp kim các loại: dao phay, mũi khoan, chip tiện CNC,
-            hợp kim cứng, molipden, và nhiều hơn nữa. Cam kết giá cao và phục vụ
-            tận nơi.
+            chip phay, dao hợp kim các loại, và nhiều hơn nữa. Cam kết giá cao
+            và phục vụ tận nơi.
           </p>
           <Button size="lg">
             Nhận Báo Giá Nhanh <ArrowRight />

@@ -7,7 +7,8 @@ import * as yup from "yup";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-// import { toast } from "sonner"
+import emailjs from "emailjs-com";
+import { useState } from "react";
 
 export type QuoteFormData = {
   name: string;
@@ -27,18 +28,32 @@ const schema = yup.object().shape({
   product: yup.string().required("Vui lòng nhập loại hợp kim"),
 });
 
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID || "";
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID || "";
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
+
 export function QuoteForm() {
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmit = (data: QuoteFormData) => {
-    // toast.success("Yêu cầu báo giá đã được gửi!")
     console.log("Form submitted:", data);
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY)
+      .then(() => {
+        setIsSubmitSuccess(true);
+        reset();
+      })
+      .catch((error) => {
+        setIsSubmitSuccess(false);
+      });
   };
 
   return (
@@ -51,30 +66,50 @@ export function QuoteForm() {
         <p className="text-center text-muted-foreground mb-8">
           Điền thông tin và chúng tôi sẽ liên hệ bạn trong 5 phút!
         </p>
+        {isSubmitSuccess && (
+          <p className="text-green-500 text-sm mb-4">
+            Yêu cầu báo giá đã được gửi thành công!
+          </p>
+        )}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          <Input placeholder="Họ tên" {...register("name")} />
-          {errors.name && (
-            <p className="text-red-500 text-sm">{errors.name.message}</p>
-          )}
+          <div className="space-y-1">
+            <Input placeholder="Họ tên" {...register("name")} />
+            {errors.name && (
+              <p className="text-red-500 text-sm">{errors.name.message}</p>
+            )}
+          </div>
 
-          <Input placeholder="Số điện thoại" {...register("phone")} />
-          {errors.phone && (
-            <p className="text-red-500 text-sm">{errors.phone.message}</p>
-          )}
+          <div className="space-y-1">
+            <Input placeholder="Số điện thoại" {...register("phone")} />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
+          </div>
 
           <Input
             placeholder="Tên công ty (không bắt buộc)"
             {...register("company")}
           />
-          <Input placeholder="Email (không bắt buộc)" {...register("email")} />
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email.message}</p>
-          )}
 
-          <Input placeholder="Loại hợp kim cần bán" {...register("product")} />
-          {errors.product && (
-            <p className="text-red-500 text-sm">{errors.product.message}</p>
-          )}
+          <div className="space-y-1">
+            <Input
+              placeholder="Email (không bắt buộc)"
+              {...register("email")}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
+          </div>
+
+          <div className="space-y-1">
+            <Input
+              placeholder="Loại hợp kim cần bán"
+              {...register("product")}
+            />
+            {errors.product && (
+              <p className="text-red-500 text-sm">{errors.product.message}</p>
+            )}
+          </div>
 
           <Textarea
             placeholder="Nội dung thêm (nếu có)"

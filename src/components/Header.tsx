@@ -28,7 +28,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto bg-primary text-white">
-        <div className="max-w-6xl  flex justify-end items-center py-1 px-4 ">
+        <div className="container flex justify-end items-center py-2 px-4 ">
           <p className="text-xs font-medium">+84 354 999 999</p>
           <Phone className="ml-2 w-3 h-3" />
         </div>
@@ -36,10 +36,10 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <button
           onClick={handleScrollToTop}
-          className="text-xl md:text-2xl font-bold text-primary tracking-wide hover:opacity-80 transition"
+          className="text-xl md:text-2xl font-bold text-primary tracking-wide hover:opacity-80 transition cursor-pointer uppercase text-red-500"
           aria-label="Trang chủ KhanhTuong"
         >
-          KhanhTuong
+          Khánh Tường
         </button>
         <Button>Gọi ngay</Button>
       </div>

@@ -7,3 +7,6 @@ export * from "./PriceBoard";
 export * from "./ProcessSection";
 export * from "./FAQSection";
 export * from "./ContactFloatButtons";
+export * from "./AlloyPurchase";
+export * from "./PurchaseRegion";
+export * from "./WhyChooseUs";
