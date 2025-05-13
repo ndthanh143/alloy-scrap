@@ -51,7 +51,7 @@ export function QuoteForm() {
         setIsSubmitSuccess(true);
         reset();
       })
-      .catch((error) => {
+      .catch(() => {
         setIsSubmitSuccess(false);
       });
   };

@@ -4,11 +4,9 @@ import {
   Footer,
   Header,
   HeroSection,
-  PriceBoard,
   ProcessSection,
   PurchaseRegion,
   QuoteForm,
-  ServiceSection,
   WhyChooseUs,
 } from "@/components";
 
