@@ -29,7 +29,7 @@ export function Header() {
     >
       <div className="mx-auto bg-primary text-white">
         <div className="container flex justify-end items-center py-2 px-4 ">
-          <p className="text-xs font-medium">+84 354 999 999</p>
+          <p className="text-xs font-medium">+84 934 364 348</p>
           <Phone className="ml-2 w-3 h-3" />
         </div>
       </div>
@@ -39,7 +39,7 @@ export function Header() {
           className="text-xl md:text-2xl font-bold text-primary tracking-wide hover:opacity-80 transition cursor-pointer uppercase text-red-500"
           aria-label="Trang chủ KhanhTuong"
         >
-          Khánh Tường
+          Nam Nguyên
         </button>
         <Button>Gọi ngay</Button>
       </div>

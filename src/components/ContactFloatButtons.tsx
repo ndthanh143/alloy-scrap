@@ -17,7 +17,7 @@ export const ContactFloatButton = () => {
     <div className="fixed bottom-4 right-4 flex flex-col items-end gap-2 md:gap-3 z-50">
       {/* Zalo button */}
       <a
-        href="https://zalo.me/0123456789"
+        href="https://zalo.me/0934364348"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Nhắn Zalo"
@@ -36,7 +36,7 @@ export const ContactFloatButton = () => {
       </a>
 
       {/* Phone button */}
-      <a href="tel:0123456789" aria-label="Gọi ngay" className="relative group">
+      <a href="tel:0934364348" aria-label="Gọi ngay" className="relative group">
         <Tooltip text="Gọi ngay" />
         <div className="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 md:p-3 transition-transform hover:scale-105 shadow-lg">
           <Phone className="w-6 h-6 md:w-8 md:h-8" />

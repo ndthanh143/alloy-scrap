@@ -24,9 +24,9 @@ export function HeroSection() {
             Thu Mua Phế Liệu Hợp Kim Giá Cao
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            Chuyên thu mua hợp kim các loại: dao phay, mũi khoan, chip tiện CNC,
-            chip phay, dao hợp kim các loại, và nhiều hơn nữa. Cam kết giá cao
-            và phục vụ tận nơi.
+            Chuyên thu mua phế liệu dao cụ hợp kim các loại: Dao phay hợp kim,
+            mũi khoan hợp kim, chip phay hợp kim, chip tiện hợp kim, dao hợp kim
+            các loại... Cam kết giá cao và làm việc chuyên nghiệp.
           </p>
           <Button size="lg">
             Nhận Báo Giá Nhanh <ArrowRight />

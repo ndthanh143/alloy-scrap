@@ -4,31 +4,31 @@ const services = [
   {
     title: "Dao phay hợp kim",
     description:
-      "Dao phay hợp kim có độ cứng cao, khả năng chịu nhiệt tốt, phù hợp cho gia công các vật liệu cứng như thép không gỉ, thép tôi và hợp kim nhôm.",
+      "Các loại dao phay hợp kim đã qua sử dụng thường được thu gom từ xưởng gia công, có nhiều kích thước và tình trạng khác nhau.",
     image: "/products/dao-phay-hop-kim.jpg",
   },
   {
     title: "Mũi khoan hợp kim",
     description:
-      "Mũi khoan hợp kim được thiết kế chính xác, giúp khoan nhanh và bền bỉ, đảm bảo hiệu suất làm việc cao trong các ngành cơ khí chính xác.",
+      "Mũi khoan hợp kim sau sử dụng từ các đơn vị cơ khí, công nghiệp thường còn lõi hợp kim giá trị, thích hợp cho việc thu mua và tái chế.",
     image: "/products/mui-khoan-hop-kim.webp",
   },
   {
     title: "Chip phay hợp kim",
     description:
-      "Chip phay hợp kim chuyên dụng cho các máy CNC, giúp nâng cao độ chính xác và tuổi thọ dao cắt trong quá trình gia công kim loại.",
+      "Chip phay hợp kim từ máy CNC, dù đã qua sử dụng vẫn chứa thành phần hợp kim quý, có thể thu hồi và xử lý tiếp.",
     image: "/products/chip-phay-hop-kim.png",
   },
   {
     title: "Chip tiện hợp kim",
     description:
-      "Chip tiện hợp kim mang lại khả năng cắt gọt mượt mà, bền bỉ và chịu được môi trường gia công khắc nghiệt, lý tưởng cho các ứng dụng tiện CNC.",
+      "Chip tiện hợp kim được thu gom từ quá trình tiện cơ khí, là nguồn nguyên liệu quan trọng trong việc tái chế hợp kim cứng.",
     image: "/products/chip-tien-hop-kim.avif",
   },
   {
     title: "Dao hợp kim các loại",
     description:
-      "Cung cấp đa dạng các loại dao hợp kim: dao phay, dao tiện, dao doa… đáp ứng mọi nhu cầu gia công cơ khí với chất lượng cao và độ bền vượt trội.",
+      "Thu mua đa dạng các loại dao hợp kim cũ: dao phay, dao tiện, dao doa… từ nhà xưởng, khu công nghiệp và cơ sở gia công cơ khí.",
     image: "/products/dao-hop-kim-cac-loai.jpg",
   },
 ];
