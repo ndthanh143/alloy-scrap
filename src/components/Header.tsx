@@ -41,7 +41,13 @@ export function Header() {
         >
           Nam Nguyên
         </button>
-        <Button>Gọi ngay</Button>
+        <a
+          href="tel:0934364348"
+          aria-label="Gọi ngay"
+          className="relative group"
+        >
+          <Button>Gọi ngay</Button>
+        </a>
       </div>
     </header>
   );
