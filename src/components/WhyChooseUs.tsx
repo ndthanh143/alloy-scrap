@@ -31,7 +31,7 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-4 xl:py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <div className="mb-4">
           <h2 className="text-3xl font-bold mb-2">Tại sao chọn chúng tôi?</h2>

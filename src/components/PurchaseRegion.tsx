@@ -70,7 +70,7 @@ const provinces = [
 
 export function PurchaseRegion() {
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">Khu vực thu mua</h2>
         <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
@@ -85,7 +85,7 @@ export function PurchaseRegion() {
               alt="Bản đồ Việt Nam"
               width={600}
               height={800}
-              className="w-full h-auto object-contain rounded-xl shadow"
+              className="w-full h-auto object-contain rounded-xl"
             />
           </div>
 

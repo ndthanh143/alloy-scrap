@@ -57,9 +57,9 @@ export function QuoteForm() {
   };
 
   return (
-    <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-10" />
-      <div className="relative max-w-xl mx-auto bg-white/40 backdrop-blur-md border border-white/30 rounded-2xl shadow-xl p-8">
+    <section className="relative py-4 xl:py-20 overflow-hidden" id="contact">
+      <div className="absolute inset-0" />
+      <div className="relative max-w-xl mx-auto border border-white/30 rounded-2xl shadow:none md:shadow-md xl:shadow-lg p-8">
         <h3 className="text-3xl font-bold text-center mb-4">
           Nhận Báo Giá Nhanh
         </h3>

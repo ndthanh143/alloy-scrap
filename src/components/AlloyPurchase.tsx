@@ -38,7 +38,7 @@ export function AlloyPurchase() {
   const secondRow = services.slice(3);
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-4 xl:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold">

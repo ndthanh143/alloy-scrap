@@ -1,5 +1,6 @@
 import {
   AlloyPurchase,
+  ContactInfo,
   FAQSection,
   Footer,
   Header,
@@ -23,6 +24,7 @@ export default function LandingPage() {
       <WhyChooseUs />
       <QuoteForm />
       <FAQSection />
+      <ContactInfo />
       <Footer />
     </main>
   );
