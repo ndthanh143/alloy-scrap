@@ -45,7 +45,7 @@ export function WhyChooseUs() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
             >
               <div className="mb-4">{reason.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{reason.title}</h3>
