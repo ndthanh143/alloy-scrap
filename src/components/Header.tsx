@@ -28,7 +28,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto bg-primary text-white">
-        <div className="container flex justify-end items-center py-2 px-4 ">
+        <div className="max-w-6xl mx-auto flex justify-end items-center py-2 px-4 ">
           <p className="text-xs font-medium">+84 934 364 348</p>
           <Phone className="ml-2 w-3 h-3" />
         </div>
