@@ -7,6 +7,7 @@ import {
   Scale,
   CreditCard,
 } from "lucide-react";
+import Image from "next/image";
 
 const steps = [
   {
@@ -47,6 +48,13 @@ const steps = [
   },
 ];
 
+const images = [
+  "/phe-lieu-1.jpg",
+  "/phe-lieu-2.jpg",
+  "/phe-lieu-21.jpg",
+  "/phe-lieu-20.jpg",
+];
+
 export function ProcessSection() {
   return (
     <section className="bg-white py-16 px-4">
@@ -72,6 +80,43 @@ export function ProcessSection() {
               <p className="text-sm text-gray-600 mt-2">{step.description}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-12">
+          <h3 className="text-xl font-semibold text-gray-900 mt-10">
+            Hình ảnh thực tế
+          </h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Dưới đây là một số hình ảnh thực tế về quy trình thu mua phế liệu
+            hợp kim của chúng tôi.
+          </p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+            {images.map((image, index) => (
+              <div key={index}>
+                <Image
+                  src={image}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  alt={`Image ${index + 1}`}
+                  className="w-full h-full rounded-lg shadow-md"
+                />
+              </div>
+            ))}
+            <div className="col-span-2 lg:col-span-4">
+              <Image
+                src="/phe-lieu-16.jpg"
+                alt="Image 5"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Chúng tôi cam kết mang đến dịch vụ thu mua phế liệu hợp kim tốt nhất
+            với giá cả cạnh tranh và quy trình minh bạch.
+          </p>
         </div>
       </div>
     </section>
