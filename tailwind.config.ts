@@ -1,11 +1,16 @@
-// export default {
-//   darkMode: ["class"], // <-- rất quan trọng cho theme dark/light
-//   theme: {
-//     extend: {
-//       colors: {
-//         // Không cần override thủ công nếu dùng default từ shadcn
-//       },
-//     },
-//   },
-//   plugins: [require("tailwindcss-animate")],
-// };
+// tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "hsl(var(--primary))",
+      },
+    },
+  },
+  // Also make sure content is configured correctly!
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  plugins: [require("tailwindcss-animate")],
+};
+export default config;
