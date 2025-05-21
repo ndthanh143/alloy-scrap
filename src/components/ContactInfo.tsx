@@ -47,7 +47,7 @@ export function ContactInfo() {
           Thông tin liên hệ
         </h2>
 
-        <Card className="bg-gradient-to-br from-primary to-primary/80 text-white shadow-xl rounded-2xl">
+        <Card className="bg-gradient-to-br from-gray-900 to-gray-900/80 text-white shadow rounded-2xl">
           <CardContent className="p-8 grid gap-5">
             {items.map((item, index) => (
               <div
