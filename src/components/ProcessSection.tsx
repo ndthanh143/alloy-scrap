@@ -49,7 +49,7 @@ const steps = [
 ];
 
 const images = [
-  "/phe-lieu-1.jpg",
+  "/phe-lieu-23.jpg",
   "/phe-lieu-2.jpg",
   "/phe-lieu-21.jpg",
   "/phe-lieu-20.jpg",
@@ -102,16 +102,6 @@ export function ProcessSection() {
                 />
               </div>
             ))}
-            <div className="col-span-2 lg:col-span-4">
-              <Image
-                src="/phe-lieu-16.jpg"
-                alt="Image 5"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full rounded-lg shadow-md"
-              />
-            </div>
           </div>
           <p className="text-sm text-gray-600 mt-4">
             Chúng tôi cam kết mang đến dịch vụ thu mua phế liệu hợp kim tốt nhất
