@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Chuyên thu mua dao cụ hợp kim các loại với giá cao, làm việc chuyên nghiệp, hỗ trợ toàn quốc.",
     images: [
       {
-        url: `${clientUrl}/og-image.png`,
+        url: `${clientUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Nam Nguyên - Thu mua phế liệu hợp kim",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Nam Nguyên - Thu mua phế liệu hợp kim toàn quốc giá cao",
     description:
       "Thu mua hợp kim dao cụ toàn quốc, giá cao, uy tín, hỗ trợ tận nơi.",
-    images: [`${clientUrl}/og-image.png`],
+    images: [`${clientUrl}/og-image.jpg`],
   },
   robots: {
     index: true,
@@ -91,7 +91,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Nam Nguyên",
-  image: `${clientUrl}/og-image.png`,
+  image: `${clientUrl}/og-image.jpg`,
   url: `${clientUrl}`,
   telephone: process.env.NEXT_PUBLIC_INFO_PHONE || "0934364348",
   description:
