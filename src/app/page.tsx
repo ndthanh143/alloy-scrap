@@ -2,8 +2,6 @@ import {
   AlloyPurchase,
   ContactInfo,
   FAQSection,
-  Footer,
-  Header,
   HeroSection,
   ProcessSection,
   PurchaseRegion,
@@ -13,8 +11,8 @@ import {
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-800">
-      <Header />
+    <section>
+      {/* <Header /> */}
       <HeroSection />
       {/* <ServiceSection /> */}
       <AlloyPurchase />
@@ -25,7 +23,7 @@ export default function LandingPage() {
       <QuoteForm />
       <FAQSection />
       <ContactInfo />
-      <Footer />
-    </main>
+      {/* <Footer /> */}
+    </section>
   );
 }

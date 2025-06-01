@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "react-notion-x/src/styles.css";
 import "./globals.css";
-import { ContactFloatButton } from "@/components";
+import { ContactFloatButton, Footer, Header } from "@/components";
 import Head from "next/head";
 
 // Fonts
@@ -78,12 +79,17 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 1,
     userScalable: false,
+    // width: "device-width",
+    // initialScale: 1,
   },
   alternates: {
     canonical: `${clientUrl}`,
     languages: {
       vi: `${clientUrl}`,
     },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   },
 };
 
@@ -136,7 +142,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="min-h-screen bg-white text-gray-800">
+          <Header />
+          {children}
+          <Footer />
+        </main>
         <ContactFloatButton />
       </body>
     </html>

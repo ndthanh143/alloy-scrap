@@ -11,3 +11,4 @@ export * from "./AlloyPurchase";
 export * from "./PurchaseRegion";
 export * from "./WhyChooseUs";
 export * from "./ContactInfo";
+export * from "./Breadcrumb";
