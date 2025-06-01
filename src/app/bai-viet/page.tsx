@@ -7,6 +7,7 @@ import { BreadCrumb } from "@/components";
 export default async function BlogsPage() {
   const posts = await getPublishedPosts();
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const featuredBlog = posts[0] as any;
   const fTitle =
     featuredBlog.properties.Name.title[0]?.plain_text || "Không tiêu đề";

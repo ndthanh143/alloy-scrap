@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { NotionAPI } from "notion-client";
-import { Card } from "@/components/ui/card";
 import { getPostBySlug } from "@/lib/notion";
 
 import { Content } from "./_components/Content";
@@ -8,12 +7,10 @@ import { BreadCrumb } from "@/components";
 
 const notionApi = new NotionAPI();
 
-export default async function BlogPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const page = await getPostBySlug(params.slug);
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default async function BlogPost({ params }: { params: any }) {
+  const { slug } = params;
+  const page = await getPostBySlug(slug);
 
   if (!page) return notFound();
 
@@ -28,7 +25,7 @@ export default async function BlogPost({
     {
       label:
         (page as any).properties.Name.title[0]?.plain_text || "Không tiêu đề",
-      href: `/bai-viet/${params.slug}`,
+      href: `/bai-viet/${slug}`,
     },
   ];
 

@@ -2,6 +2,7 @@
 
 import { NotionRenderer } from "react-notion-x";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function Content({ recordMap }: { recordMap: any }) {
   return (
     <NotionRenderer
