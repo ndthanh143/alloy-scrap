@@ -4,7 +4,8 @@ import { formatDate } from "@/lib/formatDate";
 import Image from "next/image";
 import { BreadCrumb } from "@/components";
 
-export const revalidate = Number(process.env.REVALIDATE_TIME_BLOGS) || 3600;
+export const revalidate =
+  Number(process.env.NEXT_PUBLIC_REVALIDATE_TIME_BLOGS) || 3600;
 
 export default async function BlogsPage() {
   const posts = await getPublishedPosts();
