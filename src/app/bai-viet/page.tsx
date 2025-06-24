@@ -3,8 +3,44 @@ import { getPublishedPosts } from "@/lib/notion";
 import { formatDate } from "@/lib/formatDate";
 import Image from "next/image";
 import { BreadCrumb } from "@/components";
+import { Metadata } from "next";
 
 export const revalidate = 60; // Revalidate every 60 seconds
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_CLIENT_URL || "https://www.thumuahopkimcao.com";
+
+  return {
+    title: "Tin Tức & Kiến Thức | Thu mua phế liệu hợp kim",
+    description:
+      "Cập nhật tin tức mới nhất về thu mua phế liệu hợp kim, mẹo tiết kiệm và kiến thức chuyên ngành hữu ích.",
+    alternates: {
+      canonical: `${baseUrl}/bai-viet`,
+    },
+    openGraph: {
+      title: "Tin Tức & Kiến Thức | Thu mua phế liệu hợp kim",
+      description:
+        "Theo dõi những bài viết mới nhất về ngành hợp kim, mẹo tái chế và giải pháp tiết kiệm chi phí.",
+      url: `${baseUrl}/bai-viet`,
+      type: "website",
+      images: [
+        {
+          url: `${baseUrl}/og-default.png`, // ✅ ảnh mặc định cho chia sẻ
+          width: 1200,
+          height: 630,
+          alt: "Tin tức hợp kim",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Tin Tức & Kiến Thức | Thu mua phế liệu hợp kim",
+      description: "Cập nhật các bài viết mới nhất về hợp kim và tái chế.",
+      images: [`${baseUrl}/og-default.png`],
+    },
+  };
+}
 
 export default async function BlogsPage() {
   const posts = await getPublishedPosts();
