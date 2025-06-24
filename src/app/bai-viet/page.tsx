@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/formatDate";
 import Image from "next/image";
 import { BreadCrumb } from "@/components";
 
-export const revalidate = 3600;
+export const revalidate = 60; // Revalidate every 60 seconds
 
 export default async function BlogsPage() {
   const posts = await getPublishedPosts();
