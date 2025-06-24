@@ -9,7 +9,10 @@ export function Content({ recordMap }: { recordMap: any }) {
       recordMap={recordMap}
       fullPage={false}
       darkMode={false}
-      className="!m-0 !p-0"
+      className="!m-0 !p-0 !w-full !max-w-none"
+      mapImageUrl={(url: string | undefined) =>
+        `/api/notion-image?url=${encodeURIComponent(url || "")}`
+      }
     />
   );
 }

@@ -26,7 +26,12 @@ export function BreadCrumb({ items }: BreadcrumbProps) {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage>
-                  <Badge className="text-sm">{item.label}</Badge>
+                  <Badge
+                    className="text-sm max-w-[150px] truncate inline-block align-middle"
+                    title={item.label}
+                  >
+                    {item.label}
+                  </Badge>
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </Fragment>

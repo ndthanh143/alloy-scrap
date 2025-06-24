@@ -14,8 +14,11 @@ export default async function BlogsPage() {
   const fTitle =
     featuredBlog.properties.Name.title[0]?.plain_text || "Không tiêu đề";
   const fSlug = featuredBlog.properties.Slug.rich_text[0]?.plain_text || "";
-  const fThumbnail =
+  const fThumbnailRaw =
     featuredBlog.properties.Thumbnail.files[0]?.file?.url || "/placeholder.png";
+  const fThumbnail = `/api/notion-image?url=${encodeURIComponent(
+    fThumbnailRaw
+  )}`;
   const fDate =
     featuredBlog.properties.Date.date.start || new Date().toISOString();
   const fReadTime = featuredBlog.properties.ReadTime?.number || 5; // Default read time if not set
@@ -36,13 +39,15 @@ export default async function BlogsPage() {
         <BreadCrumb items={breadcrumbItems} />
       </div>
       <div className="mb-10">
-        <h2 className="text-5xl font-semibold">Tin Tức & Kiến Thức</h2>
+        <h2 className="text-3xl md:text-5xl font-semibold">
+          Tin Tức & Kiến Thức
+        </h2>
         <h3 className="text-base mb-2 text-gray-600 mt-2">
           Cập nhật những tin tức mới nhất về thu mua phế liệu hợp kim, các mẹo
           và kiến thức hữu ích.
         </h3>
       </div>
-      <div className="grid md:grid-cols-2 gap-6 items-center mb-10">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-6 items-start md:items-center mb-10">
         <Link href={`/bai-viet/${fSlug}`}>
           <div className="rounded-lg overflow-hidden shadow hover:shadow-lg">
             <Image
@@ -50,7 +55,7 @@ export default async function BlogsPage() {
               alt={fTitle}
               width={600}
               height={350}
-              className="w-full h-auto max-h-[350px] object-cover rounded-lg"
+              className="w-full h-auto aspect-video object-cover rounded-lg"
             />
           </div>
         </Link>
@@ -59,13 +64,13 @@ export default async function BlogsPage() {
               {featuredBlog.category?.name}
             </span> */}
           <h2 className="text-2xl font-bold mb-3">{fTitle}</h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600 line-clamp-3">
             {formatDate(fDate, "long", "vi")} &nbsp;•&nbsp; Khoảng{" "}
             {fReadTime || 5} phút đọc
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {otherBlogs.map((post: any) => {
           const title =
             post.properties.Name.title[0]?.plain_text || "Không tiêu đề";
@@ -84,14 +89,18 @@ export default async function BlogsPage() {
                   alt={title}
                   width={400}
                   height={250}
-                  className="w-full h-auto max-h-[250px] object-cover"
+                  className="w-full h-auto aspect-video object-cover rounded-lg"
                 />
                 <div className="p-4">
                   {/* <span className="inline-block px-3 py-1 text-sm font-medium text-blue-700 border border-blue-300 rounded-full mb-2">
                       {blog.category?.name}
                     </span> */}
-                  <h3 className="text-lg font-semibold mb-1">{title}</h3>
-                  <p className="text-sm text-gray-600">{summary}</p>
+                  <h3 className="text-lg font-semibold mb-1 line-clamp-2">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-3">
+                    {summary}
+                  </p>
                 </div>
               </div>
             </Link>
